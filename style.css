@@ -1,18 +1,26 @@
 * {
-    background-color: azure;
+
     margin: 0;
 }
 
 #page {
+    background-color: azure;
     display:flex;
     flex-direction: column;
-    justify-content: flex-end;
-    height: auto;
+    justify-content: space-between;
+    height: 100vh;
+    width: 100vh;
 }
 
 #header {
-    height: 75px;
     background-color: goldenrod;
+    display: flex;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+p {
+    align-self: center;
 }
 
 #calcBox {
@@ -20,10 +28,36 @@
     width: 400px;
     background-color: gainsboro;
     display: flex;
+    flex-wrap: wrap;
     align-self: center;
+    border-radius: 25px;
+    justify-content: center;
+}
+
+.number {
+    height: 75px;
+    width: 75px;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.operation {
+    height: 75px;
+    width: 75px;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.punctuation {
+    height: 75px;
+    width: 75px;
+    margin: 10px;
+    border-radius: 10px;
 }
 
 #footer {
-    height: 150px;
     background-color: goldenrod;
+    display: flex;
+    box-sizing: border-box;
+    padding: 16px;
 }
