@@ -1,3 +1,28 @@
 * {
     background-color: azure;
+    margin: 0;
 };
+
+#page {
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#header {
+    height: 75px;
+    background-color: goldenrod;
+}
+
+#calcBox {
+    height: 700px;
+    width: 500px;
+    background-color: gainsboro;
+    display: flex;
+
+}
+
+#footer {
+    height: 150px;
+    background-color: goldenrod;
+}
