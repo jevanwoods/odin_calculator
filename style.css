@@ -32,9 +32,11 @@ p {
     align-self: center;
     border-radius: 25px;
     justify-content: center;
+    border: 2px solid black
 }
 
 #lastEntered {
+    box-sizing: border-box;
     background-color: aliceblue;
     min-height: 75px;
     min-width: 380px;
@@ -42,9 +44,14 @@ p {
     margin-left:10px;
     margin-right: 10px;
     border-radius: 10px;
+    border: 2px solid gray;
+    font-size: 60px;
+    text-align: right;
+    padding-right: 10px;
 }
 
 #currentEntered {
+    box-sizing: border-box;
     background-color: aliceblue;
     min-height: 75px;
     min-width: 380px;
@@ -53,10 +60,15 @@ p {
     margin-right: 10px;
     margin-bottom: -10px;
     border-radius: 10px;
+    border: 2px solid gray;
+    font-size: 60px;
+    text-align: right;
+    padding-right: 10px;
 }
 
 #buttonBox {
-    margin: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
 }
 
 .number {
