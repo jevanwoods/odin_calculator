@@ -119,6 +119,11 @@ function clr() {
     let actNum = +curNum;
     console.log(actNum);
     document.getElementById('currentEntered').innerHTML = actNum;
+    let lastNum = document.getElementById('lastEntered').innerHTML;
+    lastNum = '';
+    let clearedLastNum = +lastNum;
+    console.log(clearedLastNum);
+    document.getElementById('lastEntered').innerHTML = clearedLastNum;
 };
 
 function plus() {
@@ -126,4 +131,41 @@ function plus() {
     let lastNum = document.getElementById('lastEntered').innerHTML;
     lastNum = +curNum;
     document.getElementById('lastEntered').innerHTML = lastNum + '+';
+    curNum = '';
+    let actNum = +curNum;
+    console.log(actNum);
+    document.getElementById('currentEntered').innerHTML = actNum;
+};
+
+function minus() {
+    let curNum = document.getElementById('currentEntered').innerHTML;
+    let lastNum = document.getElementById('lastEntered').innerHTML;
+    lastNum = +curNum;
+    document.getElementById('lastEntered').innerHTML = lastNum + '-';
+    curNum = '';
+    let actNum = +curNum;
+    console.log(actNum);
+    document.getElementById('currentEntered').innerHTML = actNum;
+};
+
+function times() {
+    let curNum = document.getElementById('currentEntered').innerHTML;
+    let lastNum = document.getElementById('lastEntered').innerHTML;
+    lastNum = +curNum;
+    document.getElementById('lastEntered').innerHTML = lastNum + 'x';
+    curNum = '';
+    let actNum = +curNum;
+    console.log(actNum);
+    document.getElementById('currentEntered').innerHTML = actNum;
+};
+
+function dividedBy() {
+    let curNum = document.getElementById('currentEntered').innerHTML;
+    let lastNum = document.getElementById('lastEntered').innerHTML;
+    lastNum = +curNum;
+    document.getElementById('lastEntered').innerHTML = lastNum + '/';
+    curNum = '';
+    let actNum = +curNum;
+    console.log(actNum);
+    document.getElementById('currentEntered').innerHTML = actNum;
 };
