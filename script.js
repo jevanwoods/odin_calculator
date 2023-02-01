@@ -105,16 +105,25 @@ function getNine() {
     document.getElementById('currentEntered').innerHTML = actNum;
 };
 
-function clear() {
+function dlt() {
+    let curNum = document.getElementById('currentEntered').innerHTML;
+    let text = curNum.toString();
+    let newNumText = text.slice(0,-1);
+    newNum = +newNumText;
+    document.getElementById('currentEntered').innerHTML = newNum;
+};
+
+function clr() {
     let curNum = document.getElementById('currentEntered').innerHTML;
     curNum = '';
-    actNum = +curNum;
+    let actNum = +curNum;
+    console.log(actNum);
     document.getElementById('currentEntered').innerHTML = actNum;
-}
+};
 
 function plus() {
     let curNum = document.getElementById('currentEntered').innerHTML;
     let lastNum = document.getElementById('lastEntered').innerHTML;
     lastNum = +curNum;
     document.getElementById('lastEntered').innerHTML = lastNum + '+';
-}
+};
