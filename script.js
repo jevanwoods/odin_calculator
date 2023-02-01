@@ -31,3 +31,10 @@ function operate(operator, numberOne, numberTwo) {
         console.log("ERROR")
     }
 };
+
+const lastEntered = document.querySelector('#lastEntered');
+const currentEntered = document.querySelector('currentEntered');
+
+function getOne(
+    document.getElementById('currentEntered').innerHTML = "1";
+);

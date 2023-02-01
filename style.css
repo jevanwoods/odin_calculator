@@ -75,6 +75,10 @@ p {
     border: 2px solid black;
 }
 
+.number:active {
+    background-color: ghostwhite;
+}
+
 .operation {
     height: 75px;
     width: 75px;
@@ -85,6 +89,10 @@ p {
     border: 2px solid black;
 }
 
+.operation:active {
+    background-color: #87b6b8;
+}
+
 .punctuation {
     height: 75px;
     width: 75px;
@@ -93,6 +101,10 @@ p {
     font-size: 24px;
     background-color: forestgreen;
     border: 2px solid black;
+}
+
+.punctuation:active {
+    background-color: #2aae2a;
 }
 
 #clearDelete {
@@ -113,8 +125,16 @@ p {
     background-color:indianred;
 }
 
+#delete:active {
+    background-color: #b63838;
+}
+
 #clear {
     background-color: khaki;
+}
+
+#clear:active {
+    background-color: #e7d749;
 }
 
 #footer {
