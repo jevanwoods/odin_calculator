@@ -1,36 +1,7 @@
-function add(a, b) {
-    return a + b;
-};
+let currentOperation = '';
+let actNum = 0;
+let lastNum = 0;
 
-function subtract(a, b) {
-    return a - b;
-};
-
-function multiply(a, b) {
-    return a * b;
-};
-
-function divide(a, b) {
-    return a / b;
-};
-
-function operate(operator, numberOne, numberTwo) {
-    if (operator === "plus") {
-        let sum = add(numberOne,numberTwo);
-        console.log(sum);
-    } else if (operator === "minus") {
-        let difference = subtract(numberOne, numberTwo);
-        console.log(difference);
-    } else if (operator === "times") {
-        let multiplication = multiply(numberOne, numberTwo);
-        console.log(multiplication);
-    } else if (operator === "divided") {
-        let division = divide(numberOne, numberTwo);
-        console.log(division);
-    } else {
-        console.log("ERROR")
-    }
-};
 
 const lastEntered = document.querySelector('#lastEntered');
 const currentEntered = document.querySelector('currentEntered');
@@ -116,7 +87,7 @@ function dlt() {
 function clr() {
     let curNum = document.getElementById('currentEntered').innerHTML;
     curNum = '';
-    let actNum = +curNum;
+    actNum = +curNum;
     console.log(actNum);
     document.getElementById('currentEntered').innerHTML = actNum;
     let lastNum = document.getElementById('lastEntered').innerHTML;
@@ -132,9 +103,10 @@ function plus() {
     lastNum = +curNum;
     document.getElementById('lastEntered').innerHTML = lastNum + '+';
     curNum = '';
-    let actNum = +curNum;
+    actNum = +curNum;
     console.log(actNum);
     document.getElementById('currentEntered').innerHTML = actNum;
+    currentOperation = 'plus';
 };
 
 function minus() {
@@ -143,7 +115,7 @@ function minus() {
     lastNum = +curNum;
     document.getElementById('lastEntered').innerHTML = lastNum + '-';
     curNum = '';
-    let actNum = +curNum;
+    actNum = +curNum;
     console.log(actNum);
     document.getElementById('currentEntered').innerHTML = actNum;
 };
@@ -154,7 +126,7 @@ function times() {
     lastNum = +curNum;
     document.getElementById('lastEntered').innerHTML = lastNum + 'x';
     curNum = '';
-    let actNum = +curNum;
+    actNum = +curNum;
     console.log(actNum);
     document.getElementById('currentEntered').innerHTML = actNum;
 };
@@ -165,7 +137,48 @@ function dividedBy() {
     lastNum = +curNum;
     document.getElementById('lastEntered').innerHTML = lastNum + '/';
     curNum = '';
-    let actNum = +curNum;
+    actNum = +curNum;
     console.log(actNum);
     document.getElementById('currentEntered').innerHTML = actNum;
+};
+
+// Math Functions
+function add(a, b) {
+    return a + b;
+};
+
+function subtract(a, b) {
+    return a - b;
+};
+
+function multiply(a, b) {
+    return a * b;
+};
+
+function divide(a, b) {
+    return a / b;
+};
+
+// Operate Function - aka - Equals Function
+function operate(lastNum, actNum) {
+    console.log(currentOperation);
+    console.log(lastNum);
+    console.log(typeof lastNum);
+    console.log(actNum);
+    console.log(typeof actNum);
+    if (currentOperation === "plus") {
+        let sum = add(lastNum, actNum);
+        console.log(sum);
+    } else if (currentOperation === "minus") {
+        let difference = subtract(lastNum, actNum);
+        console.log(difference);
+    } else if (currentOperation === "times") {
+        let multiplication = multiply(lastNum, actNum);
+        console.log(multiplication);
+    } else if (currentOperation === "divided") {
+        let division = divide(lastNum, actNum);
+        console.log(division);
+    } else {
+        console.log("ERROR")
+    }
 };
