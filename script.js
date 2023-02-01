@@ -35,6 +35,43 @@ function operate(operator, numberOne, numberTwo) {
 const lastEntered = document.querySelector('#lastEntered');
 const currentEntered = document.querySelector('currentEntered');
 
-function getOne(
+function getZero() {
+    document.getElementById('currentEntered').innerHTML = "0";
+};
+
+function getOne() {
     document.getElementById('currentEntered').innerHTML = "1";
-);
+};
+
+function getTwo() {
+    document.getElementById('currentEntered').innerHTML = "2";
+};
+
+function getThree() {
+    document.getElementById('currentEntered').innerHTML = "3";
+};
+
+function getFour() {
+    document.getElementById('currentEntered').innerHTML = "4";
+};
+
+function getFive() {
+    document.getElementById('currentEntered').innerHTML = "5";
+};
+
+function getSix() {
+    document.getElementById('currentEntered').innerHTML = "6";
+};
+
+function getSeven() {
+    document.getElementById('currentEntered').innerHTML = "7";
+};
+
+function getEight() {
+    document.getElementById('currentEntered').innerHTML = "8";
+};
+
+function getNine() {
+    document.getElementById('currentEntered').innerHTML = "9";
+};
+
