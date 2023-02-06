@@ -1,6 +1,6 @@
-let currentOperation = '';
-let actNum = 0;
-let lastNum = 0;
+var currentOperation = '';
+var actNum = 0;
+var lastNum = 0;
 
 
 const lastEntered = document.querySelector('#lastEntered');
@@ -118,6 +118,7 @@ function minus() {
     actNum = +curNum;
     console.log(actNum);
     document.getElementById('currentEntered').innerHTML = actNum;
+    currentOperation = 'minus';
 };
 
 function times() {
@@ -129,6 +130,7 @@ function times() {
     actNum = +curNum;
     console.log(actNum);
     document.getElementById('currentEntered').innerHTML = actNum;
+    currentOperation = 'times';
 };
 
 function dividedBy() {
@@ -140,6 +142,7 @@ function dividedBy() {
     actNum = +curNum;
     console.log(actNum);
     document.getElementById('currentEntered').innerHTML = actNum;
+    currentOperation = 'divided';
 };
 
 // Math Functions
