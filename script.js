@@ -1,6 +1,8 @@
 var currentOperation = '';
 var actNum = 0;
 var lastNum = 0;
+var curNum = 0;
+var actNum = 0;
 
 
 const lastEntered = document.querySelector('#lastEntered');
@@ -85,12 +87,12 @@ function dlt() {
 };
 
 function clr() {
-    let curNum = document.getElementById('currentEntered').innerHTML;
+    curNum = document.getElementById('currentEntered').innerHTML;
     curNum = '';
     actNum = +curNum;
     console.log(actNum);
     document.getElementById('currentEntered').innerHTML = actNum;
-    let lastNum = document.getElementById('lastEntered').innerHTML;
+    lastNum = document.getElementById('lastEntered').innerHTML;
     lastNum = '';
     let clearedLastNum = +lastNum;
     console.log(clearedLastNum);
@@ -98,10 +100,10 @@ function clr() {
 };
 
 function plus() {
-    let curNum = document.getElementById('currentEntered').innerHTML;
-    let lastNum = document.getElementById('lastEntered').innerHTML;
+    curNum = document.getElementById('currentEntered').innerHTML;
+    lastNum = document.getElementById('lastEntered').innerHTML;
     lastNum = +curNum;
-    document.getElementById('lastEntered').innerHTML = lastNum + '+';
+    document.getElementById('lastEntered').innerHTML = lastNum + ' +';
     curNum = '';
     actNum = +curNum;
     console.log(actNum);
@@ -110,10 +112,10 @@ function plus() {
 };
 
 function minus() {
-    let curNum = document.getElementById('currentEntered').innerHTML;
-    let lastNum = document.getElementById('lastEntered').innerHTML;
+    curNum = document.getElementById('currentEntered').innerHTML;
+    lastNum = document.getElementById('lastEntered').innerHTML;
     lastNum = +curNum;
-    document.getElementById('lastEntered').innerHTML = lastNum + '-';
+    document.getElementById('lastEntered').innerHTML = lastNum + ' -';
     curNum = '';
     actNum = +curNum;
     console.log(actNum);
@@ -122,10 +124,10 @@ function minus() {
 };
 
 function times() {
-    let curNum = document.getElementById('currentEntered').innerHTML;
-    let lastNum = document.getElementById('lastEntered').innerHTML;
+    curNum = document.getElementById('currentEntered').innerHTML;
+    lastNum = document.getElementById('lastEntered').innerHTML;
     lastNum = +curNum;
-    document.getElementById('lastEntered').innerHTML = lastNum + 'x';
+    document.getElementById('lastEntered').innerHTML = lastNum + ' x';
     curNum = '';
     actNum = +curNum;
     console.log(actNum);
@@ -134,10 +136,11 @@ function times() {
 };
 
 function dividedBy() {
-    let curNum = document.getElementById('currentEntered').innerHTML;
-    let lastNum = document.getElementById('lastEntered').innerHTML;
+    curNum = document.getElementById('currentEntered').innerHTML;
+    lastNum = document.getElementById('lastEntered').innerHTML;
+    console.log(lastNum);
     lastNum = +curNum;
-    document.getElementById('lastEntered').innerHTML = lastNum + '/';
+    document.getElementById('lastEntered').innerHTML = lastNum + ' /';
     curNum = '';
     actNum = +curNum;
     console.log(actNum);
