@@ -166,7 +166,7 @@ function divide(a, b) {
 };
 
 // Operate Function - aka - Equals Function
-function operate(lastNum, actNum) {
+function operate() {
     console.log(currentOperation);
     console.log(lastNum);
     console.log(typeof lastNum);
@@ -174,15 +174,22 @@ function operate(lastNum, actNum) {
     console.log(typeof actNum);
     if (currentOperation === "plus") {
         let sum = add(lastNum, actNum);
+        document.getElementById('currentEntered').innerHTML = sum;
         console.log(sum);
     } else if (currentOperation === "minus") {
         let difference = subtract(lastNum, actNum);
+        rdocument.getElementById('currentEntered').innerHTML = difference;
         console.log(difference);
     } else if (currentOperation === "times") {
         let multiplication = multiply(lastNum, actNum);
+        document.getElementById('currentEntered').innerHTML = multiplication;
         console.log(multiplication);
-    } else if (currentOperation === "divided") {
+    }  else if (currentOperation === "divided" && actNum === 0) {
+        console.log(actNum);
+        alert("You can't do that, ya dumb dumb");
+    } else if (currentOperation === "divided" && actNum != 0) {
         let division = divide(lastNum, actNum);
+        document.getElementById('currentEntered').innerHTML = division;
         console.log(division);
     } else {
         console.log("ERROR")
